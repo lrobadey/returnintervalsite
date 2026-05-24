@@ -1,21 +1,19 @@
 const missingClass = "is-missing";
 
-document.querySelectorAll("video").forEach((video) => {
-  const markMissing = () => video.classList.add(missingClass);
+const markMissingMedia = (element) => element.classList.add(missingClass);
 
-  video.addEventListener("error", markMissing);
+document.querySelectorAll("video").forEach((video) => {
+  video.addEventListener("error", () => markMissingMedia(video));
   video.querySelectorAll("source").forEach((source) => {
-    source.addEventListener("error", markMissing);
+    source.addEventListener("error", () => markMissingMedia(video));
   });
 });
 
 document.querySelectorAll("img").forEach((image) => {
-  const markMissing = () => image.classList.add(missingClass);
-
-  image.addEventListener("error", markMissing);
+  image.addEventListener("error", () => markMissingMedia(image));
 
   if (image.complete && image.naturalWidth === 0) {
-    markMissing();
+    markMissingMedia(image);
   }
 });
 
@@ -24,7 +22,7 @@ document.querySelectorAll(".hero-image").forEach((image) => {
   const markLoaded = () => hero?.classList.add("has-image");
   const markMissing = () => {
     hero?.classList.remove("has-image");
-    image.classList.add(missingClass);
+    markMissingMedia(image);
   };
 
   image.addEventListener("load", markLoaded);
@@ -35,15 +33,22 @@ document.querySelectorAll(".hero-image").forEach((image) => {
   }
 });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-      }
-    });
-  },
-  { threshold: 0.24 }
-);
+const revealElements = document.querySelectorAll(".reveal-media");
 
-document.querySelectorAll(".reveal-media").forEach((element) => observer.observe(element));
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.24 }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+}
