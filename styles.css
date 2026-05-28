@@ -312,6 +312,7 @@ h3 {
 
 .hero-dunes-cta {
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .cta-prompt {
@@ -614,6 +615,15 @@ h3 {
 
   .button {
     width: 100%;
+  }
+
+  .hero-dunes-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dunes-button {
+    width: auto;
   }
 
   .fact-list div,
