@@ -327,7 +327,7 @@ h3 {
   border-color: transparent;
   border-radius: 999px;
   color: #bd9360;
-  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  font-size: clamp(1.9rem, 3.4vw, 3.2rem);
   letter-spacing: 0.16em;
   min-height: 58px;
   padding: 0 26px;
