@@ -117,7 +117,8 @@ video {
 }
 
 .hero {
-  min-height: 100svh;
+  height: 100svh;
+  min-height: 0;
   overflow: hidden;
   position: relative;
 }
@@ -216,10 +217,11 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100svh;
-  padding: calc(var(--header-h) + 24px) clamp(20px, 6vw, 80px) 64px;
+  height: 100svh;
+  min-height: 0;
+  padding: calc(var(--header-h) + 16px) clamp(20px, 6vw, 80px) 44px;
   position: relative;
-  width: min(760px, 100%);
+  width: min(820px, 100%);
   z-index: 4;
 }
 
@@ -247,8 +249,8 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(3.4rem, 8vw, 7rem);
-  margin-bottom: 24px;
+  font-size: clamp(3.2rem, 7.2vw, 6.25rem);
+  margin-bottom: 18px;
 }
 
 h2 {
@@ -266,8 +268,8 @@ h3 {
 .intro-copy,
 .teaser-card p {
   color: var(--muted);
-  font-size: clamp(1rem, 1.5vw, 1.22rem);
-  line-height: 1.55;
+  font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+  line-height: 1.45;
 }
 
 .hero-copy {
@@ -279,7 +281,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .button {
@@ -317,7 +319,7 @@ h3 {
 
 .cta-prompt {
   color: rgba(241, 238, 231, 0.76);
-  font-size: clamp(1.05rem, 1.6vw, 1.45rem);
+  font-size: clamp(0.98rem, 1.35vw, 1.25rem);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -328,7 +330,7 @@ h3 {
   border-color: transparent;
   border-radius: 999px;
   color: #bd9360;
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-size: clamp(2.35rem, 4.25vw, 4rem);
   letter-spacing: 0.16em;
   min-height: 58px;
   padding: 0 26px;
@@ -603,8 +605,9 @@ h3 {
 
   .hero-content {
     justify-content: end;
-    min-height: 88svh;
-    padding-bottom: 84px;
+    height: 100svh;
+    min-height: 0;
+    padding-bottom: 40px;
   }
 
   .hero-shade {
