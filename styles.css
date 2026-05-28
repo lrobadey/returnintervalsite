@@ -345,16 +345,17 @@ h3 {
 
 .hero-contact {
   align-items: flex-end;
-  bottom: 44px;
-  color: rgba(241, 238, 231, 0.74);
+  bottom: 72px;
+  color: rgba(241, 238, 231, 0.92);
   display: flex;
   flex-direction: column;
-  font-size: clamp(0.78rem, 1vw, 0.9rem);
-  gap: 8px;
+  font-size: clamp(0.86rem, 1.1vw, 1rem);
+  gap: 10px;
   letter-spacing: 0.02em;
   position: absolute;
-  right: clamp(20px, 4vw, 56px);
-  z-index: 5;
+  right: clamp(24px, 5vw, 72px);
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.82);
+  z-index: 6;
 }
 
 .hero-contact a {
