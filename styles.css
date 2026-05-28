@@ -343,6 +343,29 @@ h3 {
   color: #bd9360;
 }
 
+.hero-contact {
+  align-items: flex-end;
+  bottom: 44px;
+  color: rgba(241, 238, 231, 0.74);
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  gap: 8px;
+  letter-spacing: 0.02em;
+  position: absolute;
+  right: clamp(20px, 4vw, 56px);
+  z-index: 5;
+}
+
+.hero-contact a {
+  transition: color 180ms ease;
+}
+
+.hero-contact a:hover,
+.hero-contact a:focus-visible {
+  color: var(--ink);
+}
+
 .button-secondary {
   background: rgba(17, 19, 19, 0.26);
   color: var(--ink);
@@ -627,6 +650,13 @@ h3 {
 
   .dunes-button {
     width: auto;
+  }
+
+  .hero-contact {
+    align-items: flex-start;
+    bottom: 18px;
+    left: 20px;
+    right: auto;
   }
 
   .fact-list div,
