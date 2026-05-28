@@ -117,7 +117,7 @@ video {
 }
 
 .hero {
-  min-height: min(90svh, 820px);
+  min-height: 100svh;
   overflow: hidden;
   position: relative;
 }
@@ -216,7 +216,7 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: min(90svh, 820px);
+  min-height: 100svh;
   padding: calc(var(--header-h) + 24px) clamp(20px, 6vw, 80px) 64px;
   position: relative;
   width: min(760px, 100%);
