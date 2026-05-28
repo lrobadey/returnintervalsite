@@ -323,10 +323,21 @@ h3 {
 }
 
 .dunes-button {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 999px;
+  color: #bd9360;
   font-size: clamp(1.3rem, 2vw, 1.9rem);
   letter-spacing: 0.16em;
   min-height: 58px;
   padding: 0 26px;
+}
+
+.dunes-button:hover,
+.dunes-button:focus-visible {
+  background: rgba(189, 147, 96, 0.14);
+  border-color: rgba(189, 147, 96, 0.46);
+  color: #bd9360;
 }
 
 .button-secondary {
