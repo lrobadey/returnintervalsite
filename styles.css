@@ -358,6 +358,15 @@ h3 {
   z-index: 6;
 }
 
+.hero-contact span {
+  color: #bd9360;
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
 .hero-contact a {
   transition: color 180ms ease;
 }
