@@ -310,6 +310,25 @@ h3 {
   background: var(--accent);
 }
 
+.hero-dunes-cta {
+  align-items: center;
+}
+
+.cta-prompt {
+  color: rgba(241, 238, 231, 0.76);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dunes-button {
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  letter-spacing: 0.16em;
+  min-height: 58px;
+  padding: 0 26px;
+}
+
 .button-secondary {
   background: rgba(17, 19, 19, 0.26);
   color: var(--ink);
